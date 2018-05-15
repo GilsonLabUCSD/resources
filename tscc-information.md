@@ -25,7 +25,14 @@
   - Hardware: GeForce GTX 680 2x 6-core Xeon E5-2630 2.3 GHz, 32 GB memory
   - Wall clock: 72 hours
 
-  Each GPU node has 4 GPUs. Hotel are nodes that TSCC owns. There are also CPU nodes available via `hotel` (without the `gpu` prefix).
+  Each GPU node has 4 GPUs. Hotel are nodes that TSCC owns.
+
+- `hotel` (owned by TSCC)
+  - Number: About 51
+  - Hardware: 2x 8-core Xeon E5-2670 2.6 GHz, 64 GB memory, Infiniband (but may not all be on the same switch)
+  - Wall clock: 72 hours
+
+  Can specify `ibswitch1` or `ibswitch2` (see [here](http://www.sdsc.edu/~hocks/FG/TSCC.torque.html)).
 
 - `gpu-condo` (the collection of all the nodes owned by groups)
 
@@ -33,9 +40,15 @@
   - Hardware: Mix of GTX Titan X, GTX 980, GTX 780, GTX 680, GTX 1080 Ti
   - Wall clock: 8 hours
 
-  Each GPU node has 4 or 8 GPUs. There are also GPU nodes available via `condo` (without the `gpu` prefix).
+  Each GPU node has 4 or 8 GPUs.
 
-- `glean` (whatever is available; often broken)
+- `condo` (the collection of all the nodes owned by groups)
+
+  - Number: About 232
+  - Hardware: Mix (between 16 and 24 cores per node), 64-512 GB memory
+  - Wall clock: 8 hours
+
+- `glean` (whatever is available of the groups; often broken)
 
   - Number: About 232
   - Hardware: Mix
