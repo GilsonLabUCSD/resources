@@ -60,7 +60,6 @@
 ## Useful commands
 
 - `pbsnodes`: show all the nodes and their properties
-- `/usr/bin/python /opt/sdsc/bin/lsjobs`: list jobs running on the nodes (can also use the `gpu` flag to see GPU jobs, e.g., `lsjobs gpu`)
-- `qsub -I -q home-gibbs -l nodes=1:ppn=2 -l walltime=0:50:00`: request an interactive job on the `home-gibbs` queue
- /usr/bin/python /opt/sdsc/bin/lsjobs gpu
+- `lsjobs gpu`: list jobs running on the GPU nodes
+- `qsub -I -X -q home-gibbs -l nodes=1:ppn=2 -l walltime=0:50:00`: request an interactive job on the `home-gibbs` queue
 - `showq` / `qstat`: show status of jobs
