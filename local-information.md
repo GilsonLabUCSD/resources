@@ -14,10 +14,10 @@
   - 2x 8-core Intel(R) Xeon(R) CPU E5-2687W 0 @ 3.10GHz
   - 128 GB memory
   - No GPUs
-  - 180 GB `/`, 44 TB (RAID 6**?**) `/home`, 44 TB (RAID 6**?**) `/data2`, `/backup2`, 36 TB (RAID 6 **?**), `/data`
+  - 180 GB `/`, 75 GB `/home`, 36 TB (RAID 6) `/data`, 44 TB (RAID 6) `/data2` and `/backup2`
   - GPFS mounted `/gpfs`
 - `onsager`
   - 2x 8-core Intel(R) Xeon(R) CPU E5-2687W 0 @ 3.10GHz
   - 128 GB memory
   - No GPUs
-  - 180 GB `/`, 36 TB (RAID 6**?**) `/data`, 87 TB (RAID 6**?**) `/backup`
+  - 180 GB `/`,  75 GB `/home`, 36 TB (RAID 6) `/data`, 87 TB (RAID 6) `/backup`
