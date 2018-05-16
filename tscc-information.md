@@ -63,3 +63,4 @@
 - `lsjobs gpu`: list jobs running on the GPU nodes
 - `qsub -I -X -q home-gibbs -l nodes=1:ppn=2 -l walltime=0:50:00`: request an interactive job on the `home-gibbs` queue
 - `showq` / `qstat`: show status of jobs
+- `python3 /home/henrikse/pe/tsccqstat.py <username>`: detailed listing of running jobs and their nodes (should be python 2.7+ compatible)
