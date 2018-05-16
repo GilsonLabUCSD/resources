@@ -1,4 +1,4 @@
-# Local machines
+# Local (common) machines
 
 - `vulcan`
   - 2x 10-core Intel(R) Xeon(R) Silver 4114 CPU @ 2.20GHz
