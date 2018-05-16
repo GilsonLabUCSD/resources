@@ -1,0 +1,23 @@
+# Local (common) machines
+
+- `vulcan`
+  - 2x 10-core Intel(R) Xeon(R) Silver 4114 CPU @ 2.20GHz
+  - 98 GB memory
+  - 8x GeForce GTX 1080 Ti (Pascal)
+  - 256 GB SSD, 2 TB data
+- `entropy`
+  - 2x 6-core Intel(R) Xeon(R) X5680  @ 3.33GHz
+  - 72 GB memory
+  - 4x GeForce GTX 980
+  - 1 TB `/`, 7.3 TB (RAID 5) `/data`
+- `kirkwood`
+  - 2x 8-core Intel(R) Xeon(R) CPU E5-2687W 0 @ 3.10GHz
+  - 128 GB memory
+  - No GPUs
+  - 180 GB `/`, 75 GB `/home`, 36 TB (RAID 6) `/data`, 44 TB (RAID 6) `/data2` and `/backup2`
+  - GPFS mounted `/gpfs`
+- `onsager`
+  - 2x 8-core Intel(R) Xeon(R) CPU E5-2687W 0 @ 3.10GHz
+  - 128 GB memory
+  - No GPUs
+  - 180 GB `/`,  75 GB `/home`, 36 TB (RAID 6) `/data`, 87 TB (RAID 6) `/backup`
