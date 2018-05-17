@@ -58,7 +58,7 @@
 
 ### Scratch
 
-From the [documentation](http://www.sdsc.edu/support/user_guides/tscc-quick-start.html), the home directories for all users are NFS mounted through a single server and thus, they are slow. Don't run jobs in your home directory. `/oasis/tscc/scratch` is optimized for efficient handling of large files (you can create a directory below that, e.g., `/oasis/tscc/scratch/$USER`) for your jobs. This works well with 10-200 files open simultaneously. Local storage -- disks directly connected to each node -- can be used too, `/state/partition1/$USER/$PBS_JOBID`, but the files are purged when the job completes, so make sure to `rsync` these somewhere else! The local storage is available under `$TMPDIR` in the job script. Size is limited to 200 GB for `home-gilson` GPU nodes and 2 TB for `home-gibbs` GPU nodes.
+From the [documentation](http://www.sdsc.edu/support/user_guides/tscc-quick-start.html), the home directories for all users are NFS mounted through a single server and thus, they are slow. Don't run jobs in your home directory. `/oasis/tscc/scratch` is optimized for efficient handling of large files (you can create a directory below that, e.g., `/oasis/tscc/scratch/$USER`) for your jobs. This works well with 10-200 files open simultaneously. Local storage -- disks directly connected to each node -- can be used too and is available as `$TMPDIR`, but the files are purged when the job completes, so make sure to `rsync` these somewhere else! Size is limited to 200 GB for `home-gilson` GPU nodes and 2 TB for `home-gibbs` GPU nodes.
 
 
 ## Useful commands
