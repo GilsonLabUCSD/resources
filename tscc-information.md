@@ -68,4 +68,5 @@ From the [documentation](http://www.sdsc.edu/support/user_guides/tscc-quick-star
 - `lsjobs --property=mgilson-node`: list all jobs (including `glean` running on `home-mgilson` nodes)
 - `qsub -I -X -q home-gibbs -l nodes=1:ppn=2 -l walltime=0:50:00`: request an interactive job on the `home-gibbs` queue
 - `showq` / `qstat`: show status of jobs
+- `showq -i`: show jobs under consideration by the scheduler (only about 10 jobs at a time for each user are under consideration)
 - `python3 /home/henrikse/pe/tsccqstat.py <username>`: detailed listing of running jobs and their nodes (should be python 2.7+ compatible)
