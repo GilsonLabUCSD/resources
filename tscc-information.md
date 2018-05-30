@@ -19,7 +19,7 @@
 
   Each GPU node has 4 GPUs. Specific GPU resources can be requested in the PBS script with `-l nodes=1:ppn=2:gpu680,gpu780` (for example).
 
-- `gpu-hotel` (owned by TSCC)
+- `gpu-hotel` (owned by TSCC; we get charged for this)
 
   - Number: 3
   - Hardware: GeForce GTX 680 2x 6-core Xeon E5-2630 2.3 GHz, 32 GB memory
@@ -27,7 +27,7 @@
 
   Each GPU node has 4 GPUs. Hotel are nodes that TSCC owns.
 
-- `hotel` (owned by TSCC)
+- `hotel` (owned by TSCC; we get charged for this)
   - Number: About 51
   - Hardware: 2x 8-core Xeon E5-2670 2.6 GHz, 64 GB memory, Infiniband (but may not all be on the same switch)
   - Wall clock: 72 hours
