@@ -17,7 +17,7 @@
   - GPU Hardware: 3 nodes with GeForce GTX 980 (2x 6-core Xeon 2.6 GHz, 64 GB), 2 nodes with GeForce GTX 780 (2x 6-core Xeon 2.6 GHz, 32 GB), 2 nodes with GeForce GTX 680 (2x 6-core Xeon 2.3 GHz, 64 GB)
   - Wall clock: No limit
 
-  Each GPU node has 4 GPUs. Specific GPU resources can be requested in the PBS script with `-l nodes=1:ppn=2:gpu680,gpu780` (for example).
+  Each GPU node has 4 GPUs. Specific GPU resources can be requested in the PBS script with `-l nodes=1:ppn=3:gpu680,gpu780,gpu980` (make sure you specify 3 processors for every GPU).
 
 - `gpu-hotel` (owned by TSCC; we get charged for this)
 
