@@ -7,6 +7,10 @@
   - Number: About 24 nodes
   - Hardware: GTX Titan X (Maxwell), 2x 8-core Xeon E5-2630 2.4 GHz, 64 GB memory
   - Wall clock: No limit
+  
+    Two notes about walltime limit that also apply to other queues: 
+    - when maintenance is scheduled, it will prevent jobs whose walltime limit is longer than the time left until maintenance from running. 
+    - When walltime limit is not set in a job, e.g. `qsub -I -l nodes=1:ppn=2:gpu -q home-gibbs -A mgilson-gibbs`, the limit defaults to 1 hours which is often too short.
 
   Each GPU node has 8 GPUs. Specific GPU resources can be requested in the PBS script with `-l nodes=1:ppn=2:gpuTitan` (for example).
 
@@ -44,17 +48,17 @@
 
 - `condo` (the collection of all the nodes owned by groups)
 
-  - Number: About 232
+  - Number: About 232. One user can only occupy 512 condo processors at the same time.
   - Hardware: Mix (between 16 and 24 cores per node), 64-512 GB memory
   - Wall clock: 8 hours
 
 - `glean` (whatever is available of the groups; often broken)
 
-  - Number: About 232
+  - Number: About 232. One user can only occupy 1024 glean processors at the same time.
   - Hardware: Mix
   - Wall clock: No limit
 
-  Glean gives whatever is available. Jobs can be killed at any time.
+  Glean gives whatever is available. Glean is free of charge to our lab account. Jobs can be killed at any time when another user requests the same resource using non-glean queue.
 
 ### Scratch
 
