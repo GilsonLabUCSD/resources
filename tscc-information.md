@@ -21,7 +21,7 @@
   - GPU Hardware: 3 nodes with GeForce GTX 980 (2x 6-core Xeon 2.6 GHz, 64 GB), 2 nodes with GeForce GTX 780 (2x 6-core Xeon 2.6 GHz, 32 GB), 2 nodes with GeForce GTX 680 (2x 6-core Xeon 2.3 GHz, 64 GB)
   - Wall clock: No limit
 
-  Each GPU node has 4 GPUs. Specific GPU resources can be requested in the PBS script with `-l nodes=1:ppn=3:gpu680,gpu780,gpu980` (make sure you specify 3 processors for every GPU).
+  Each GPU node has 4 GPUs. Specific GPU resources can be requested in the PBS script with `-l nodes=1:ppn=3:gpu680,gpu780,gpu980` (make sure you specify 3 processors for every GPU). To request all 4 GPUs in a GPU node, use `-l nodes=1:ppn=12:gpu`.
 
 - `gpu-hotel` (owned by TSCC; we get charged for this)
 
@@ -56,7 +56,7 @@
 
   - Number: About 232. One user can only occupy 1024 glean processors at the same time.
   - Hardware: Mix
-  - Wall clock: No limit
+  - Wall clock: 8 hours (used to be unlimited but they changed in April 2020)
 
   Glean gives whatever is available. Glean is free of charge to our lab account. Jobs can be killed at any time when another user requests the same resource using non-glean queue.
 
