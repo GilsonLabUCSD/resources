@@ -4,36 +4,44 @@
 
 - `home-gibbs` (shared among a few groups)
 
-  - Number: About 24 nodes
-  - Hardware: GTX Titan X (Maxwell), 2x 8-core Xeon E5-2630 2.4 GHz, 64 GB memory
+  - Number: 24 nodes
+  - Hardware: 8x GTX Titan X (Maxwell), 2x 8-core Xeon E5-2630 @ 2.4 GHz, 64 GB DDR3 memory
   - Wall clock: No limit
   
     Two notes about walltime limit that also apply to other queues: 
     - when maintenance is scheduled, it will prevent jobs whose walltime limit is longer than the time left until maintenance from running. 
     - When walltime limit is not set in a job, e.g. `qsub -I -l nodes=1:ppn=2:gpu -q home-gibbs -A mgilson-gibbs`, the limit defaults to 1 hours which is often too short.
 
-  Each GPU node has 8 GPUs. Specific GPU resources can be requested in the PBS script with `-l nodes=1:ppn=2:gpuTitan` (for example).
+Each GPU node has 8 GPUs and 16 cores (in multiples of 21 CPU:GPU ratio). Specific GPU resources can be requested in the PBS script with `-l nodes=1:ppn=2:gpuTitan` (for example).
+
+- `home-hopper` (shared among a few groups)
+  - Number: 4 CPU nodes, 17 GPU nodes
+  - GPU Hardware: 8x RTX 3090 (Ampere), 2x 16-core AMD EPYC Rome 7282 @ 2.8 GHz, 256 GB DDR4 memory
+  - CPU Hardware: 2x 32-core AMD EPYC Rome, 256 GB DDR4 memory
+  - Wall clock: No limit 
+    
+Each GPU node has 8 GPUs and 32 cores (in multiples of 4:1 CPU:GPU ratio). Specific GPU resources can be requested in the PBS script with `-l nodes=1:ppn=4:gpu3090` (for example).
 
 - `home-mgilson` (owned by us)
 
-  - Number: 10 CPU nodes, 7 GPU nodes
-  - CPU Hardware: Each node has 2x 8-core Xeon E5-2670 2.6 GHz, 128 GB memory, Infiniband
-  - GPU Hardware: 3 nodes with GeForce GTX 980 (2x 6-core Xeon 2.6 GHz, 64 GB), 2 nodes with GeForce GTX 780 (2x 6-core Xeon 2.6 GHz, 32 GB), 2 nodes with GeForce GTX 680 (2x 6-core Xeon 2.3 GHz, 64 GB)
+  - Number: 9 CPU nodes, 3 GPU nodes
+  - CPU Hardware: Each node has 2x 8-core Xeon E5-2670 @ 2.6 GHz, 128 GB memory, Infiniband
+  - GPU Hardware: 3 nodes with GeForce GTX 980 (2x 6-core Xeon @ 2.6 GHz, 64 GB)
   - Wall clock: No limit
 
-  Each GPU node has 4 GPUs. Specific GPU resources can be requested in the PBS script with `-l nodes=1:ppn=3:gpu680,gpu780,gpu980` (make sure you specify 3 processors for every GPU). To request all 4 GPUs in a GPU node, use `-l nodes=1:ppn=12:gpu`.
+  Each GPU node has 4 GPUs. Specific GPU resources can be requested in the PBS script with `-l nodes=1:ppn=3:gpu980` (make sure you specify 3 processors for every GPU). To request all 4 GPUs in a GPU node, use `-l nodes=1:ppn=12:gpu`.
 
 - `gpu-hotel` (owned by TSCC; we get charged for this)
 
   - Number: 3
-  - Hardware: GeForce GTX 680 2x 6-core Xeon E5-2630 2.3 GHz, 32 GB memory
+  - Hardware: GeForce GTX 680 2x 6-core Xeon E5-2630 @ 2.3 GHz, 32 GB memory
   - Wall clock: 72 hours
 
   Each GPU node has 4 GPUs. Hotel are nodes that TSCC owns.
 
 - `hotel` (owned by TSCC; we get charged for this)
   - Number: About 51
-  - Hardware: 2x 8-core Xeon E5-2670 2.6 GHz, 64 GB memory, Infiniband (but may not all be on the same switch)
+  - Hardware: 2x 8-core Xeon E5-2670 @ 2.6 GHz, 64 GB memory, Infiniband (but may not all be on the same switch)
   - Wall clock: 72 hours
 
   Can specify `ibswitch1` or `ibswitch2` (see [here](http://www.sdsc.edu/~hocks/FG/TSCC.torque.html)).
