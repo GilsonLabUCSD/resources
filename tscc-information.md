@@ -28,8 +28,6 @@ Each GPU node has 8 GPUs and 32 cores (in multiples of 4:1 CPU:GPU ratio). Speci
   - CPU Hardware: Each node has 2x 8-core Xeon E5-2670 @ 2.6 GHz, 128 GB memory, Infiniband
   - Wall clock: No limit
 
-  Each GPU node has 4 GPUs. Specific GPU resources can be requested in the PBS script with `-l nodes=1:ppn=3:gpu980` (make sure you specify 3 processors for every GPU). To request all 4 GPUs in a GPU node, use `-l nodes=1:ppn=12:gpu`.
-
 - `gpu-hotel` (owned by TSCC; we get charged for this)
 
   - Number: 3
