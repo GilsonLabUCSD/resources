@@ -24,9 +24,8 @@ Each GPU node has 8 GPUs and 32 cores (in multiples of 4:1 CPU:GPU ratio). Speci
 
 - `home-mgilson` (owned by us)
 
-  - Number: 9 CPU nodes, 3 GPU nodes
+  - Number: 7 CPU nodes
   - CPU Hardware: Each node has 2x 8-core Xeon E5-2670 @ 2.6 GHz, 128 GB memory, Infiniband
-  - GPU Hardware: 3 nodes with GeForce GTX 980 (2x 6-core Xeon @ 2.6 GHz, 64 GB)
   - Wall clock: No limit
 
   Each GPU node has 4 GPUs. Specific GPU resources can be requested in the PBS script with `-l nodes=1:ppn=3:gpu980` (make sure you specify 3 processors for every GPU). To request all 4 GPUs in a GPU node, use `-l nodes=1:ppn=12:gpu`.
@@ -48,7 +47,7 @@ Each GPU node has 8 GPUs and 32 cores (in multiples of 4:1 CPU:GPU ratio). Speci
 
 - `gpu-condo` (the collection of all the nodes owned by groups)
 
-  - Number: About 55
+  - Number: About 51
   - Hardware: Mix of GTX Titan X, GTX 980, GTX 780, GTX 680, GTX 1080 Ti
   - Wall clock: 8 hours
 
